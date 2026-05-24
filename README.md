@@ -17,6 +17,7 @@ Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker i
 | [01-quickstart](01-quickstart/README.md) | Broker único via Docker, CLI de topics/producer/consumer/consumer-groups | `apache/kafka:4.0.2` |
 | [02-cluster-zookeeper](02-cluster-zookeeper/README.md) | Cluster de 3 brokers coordenado por ZooKeeper | `confluentinc/cp-kafka:7.6.1` |
 | [03-cluster](03-cluster/README.md) | Cluster de 3 brokers KRaft (sem ZooKeeper) | `apache/kafka:4.0.2` |
+| [04-kafka-api](04-kafka-api/README.md) | Producer e consumer em Python com `confluent-kafka` | Python 3 |
 
 ---
 
