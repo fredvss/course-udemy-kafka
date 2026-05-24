@@ -4,6 +4,12 @@ Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker i
 
 ---
 
+## Documentação
+
+- [Fundamentos do Kafka](docs/fundamentos.md) — broker, bootstrap server, topics, partições, replicação, offsets, consumer groups
+
+---
+
 ## Módulos
 
 | Módulo | Descrição | Tecnologia |
