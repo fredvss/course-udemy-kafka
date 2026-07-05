@@ -6,7 +6,26 @@ Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker i
 
 ## Documentação
 
-- [Fundamentos do Kafka](docs/fundamentos.md) — broker, bootstrap server, topics, partições, replicação, offsets, consumer groups
+- [01 - Fundamentos](docs/fundamentos.md)
+  - Arquitetura do cluster
+  - Brokers
+  - Topics e partições
+  - Replicação e ISR
+  - Offsets
+  - Consumer Groups
+  - Retenção e Log Compaction
+
+- [02 - Configurações](docs/configuracoes.md)
+  - Broker
+  - Topic
+  - Producer
+  - Consumer
+  - Compressão
+  - Batching
+  - Retries
+  - Durabilidade (acks, ISR)
+  - Retenção e segmentos
+  - Serialização (Protobuf/Schema Registry)
 
 ---
 
