@@ -1,66 +1,91 @@
 # Apache Kafka — Curso Udemy
 
-Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker isolado até clusters com ZooKeeper e KRaft.
-
----
-
-## Documentação
-
-- [01 - Fundamentos](docs/fundamentos.md)
-  - Arquitetura do cluster
-  - Brokers
-  - Topics e partições
-  - Replicação e ISR
-  - Offsets
-  - Consumer Groups
-  - Retenção e Log Compaction
-
-- [02 - Configurações](docs/configuracoes.md)
-  - Broker
-  - Topic
-  - Producer
-  - Consumer
-  - Compressão
-  - Batching
-  - Retries
-  - Durabilidade (acks, ISR)
-  - Retenção e segmentos
-  - Serialização (Protobuf/Schema Registry)
-
----
-
-## Módulos
-
-| Módulo | Descrição | Tecnologia |
-|---|---|---|
-| [01-quickstart](01-quickstart/) | Broker único via Docker, CLI de topics/producer/consumer/consumer-groups | `apache/kafka:4.0.2` |
-| [02-cluster-zookeeper](02-cluster-zookeeper/) | Cluster de 3 brokers coordenado por ZooKeeper | `confluentinc/cp-kafka:7.6.1` |
-| [03-cluster](03-cluster/) | Cluster de 3 brokers KRaft (sem ZooKeeper) | `apache/kafka:4.0.2` |
-| [04-kafka-api](04-kafka-api/) | Producer e consumer em Python com `confluent-kafka` | Python 3 |
-| [05-nginx-logs](05-nginx-logs/) | Nginx com tag fixa, producer lendo `access.log` e consumer do topic `nginx-logs` | Nginx + Python 3 |
-
----
-
-## Conceitos abordados
-
-- Topics, partições e replicação
-- Producers: round-robin e roteamento por chave
-- Consumers e consumer groups
-- Offsets, lag e reset de offsets
-- Arquitetura ZooKeeper vs KRaft
-- Configuração de listeners internos/externos
-- Ingestão de logs do Nginx em um topic Kafka
-- Producer com `acks`, idempotência, compressão e batching
-- Consumer group lendo eventos publicados
-
----
+Material prático de estudos sobre Apache Kafka, passando pelos fundamentos da plataforma, configuração de brokers e clients, clusters ZooKeeper e KRaft, desenvolvimento de producers/consumers e integração com aplicações reais utilizando Python.
 
 ## Pré-requisitos
 
-- Docker e Docker Compose instalados
-- Nenhuma dependência local além do Docker
+| Requisito | Módulos |
+|-----------|----------|
+| Docker Engine | todos |
+| Docker Compose v2 | todos |
+| Python 3.11+ | 04, 05 |
+| pip | 04, 05 |
 
-```bash
-docker --version
-docker compose version
+## Estrutura do repositório
+
+| Pasta | Tema | Documentação |
+|-------|------|--------------|
+| [01-quickstart](01-quickstart/) | Primeiro broker Kafka, CLI e operações básicas | [README](01-quickstart/README.md) |
+| [02-cluster-zookeeper](02-cluster-zookeeper/) | Cluster Kafka utilizando ZooKeeper | [README](02-cluster-zookeeper/README.md) |
+| [03-cluster-kraft](03-cluster-kraft/) | Cluster Kafka utilizando KRaft | [README](03-cluster-kraft/README.md) |
+| [04-kafka-api](04-kafka-api/) | Producer e Consumer em Python | [README](04-kafka-api/README.md) |
+| [05-nginx-logs](05-nginx-logs/) | Ingestão de logs do Nginx via Kafka | [README](05-nginx-logs/README.md) |
+
+## Documentação
+
+Fundamentos e configurações em **docs/**.
+
+### Fundamentos
+
+- Fundamentos do Kafka
+- Configurações do Kafka
+
+### Guias práticos
+
+- Criando um cluster KRaft
+- Criando um cluster ZooKeeper
+- Producer em Python
+- Consumer em Python
+- Publicando logs do Nginx
+
+### Recursos extras
+
+- Anotações
+- Diagramas
+
+## Ordem sugerida
+
+```text
+01-quickstart
+      ↓
+02-cluster-zookeeper
+      ↓
+03-cluster-kraft
+      ↓
+04-kafka-api
+      ↓
+05-nginx-logs
 ```
+
+> Os documentos em `docs/` complementam os exercícios práticos e podem ser lidos a qualquer momento.
+
+## Conceitos estudados
+
+- Arquitetura Kafka
+- Brokers
+- Controllers
+- ZooKeeper
+- KRaft
+- Topics
+- Partições
+- Replicação
+- ISR
+- Offsets
+- Consumer Groups
+- Producer
+- Consumer
+- Leader Election
+- Retenção
+- Log Compaction
+- Batching
+- Compressão
+- Retries
+- Idempotência
+- DLQ
+- Serialização
+- Protobuf
+- Schema Registry
+
+## Licença
+
+Material de estudo pessoal — use livremente para aprendizado.
