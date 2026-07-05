@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:1.27.5-alpine
+    container_name: kafka-study-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./logs:/var/log/nginx

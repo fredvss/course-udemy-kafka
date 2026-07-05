@@ -37,6 +37,7 @@ Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker i
 | [02-cluster-zookeeper](02-cluster-zookeeper/README.md) | Cluster de 3 brokers coordenado por ZooKeeper | `confluentinc/cp-kafka:7.6.1` |
 | [03-cluster](03-cluster/README.md) | Cluster de 3 brokers KRaft (sem ZooKeeper) | `apache/kafka:4.0.2` |
 | [04-kafka-api](04-kafka-api/README.md) | Producer e consumer em Python com `confluent-kafka` | Python 3 |
+| [05-nginx-logs](05-nginx-logs/README.md) | Nginx com tag fixa, producer lendo `access.log` e consumer do topic `nginx-logs` | Nginx + Python 3 |
 
 ---
 
@@ -48,6 +49,9 @@ Repositório de estudos práticos sobre Apache Kafka, cobrindo desde um broker i
 - Offsets, lag e reset de offsets
 - Arquitetura ZooKeeper vs KRaft
 - Configuração de listeners internos/externos
+- Ingestão de logs do Nginx em um topic Kafka
+- Producer com `acks`, idempotência, compressão e batching
+- Consumer group lendo eventos publicados
 
 ---
 
