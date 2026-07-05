@@ -58,7 +58,7 @@ localhost:9092,localhost:9093,localhost:9094
 Este módulo usa uma tag fixa do Nginx, não `latest`:
 
 ```yaml
-image: nginx:1.27.5-alpine
+image: nginx:1.27.5-alpine3.21
 ```
 
 Para subir:
